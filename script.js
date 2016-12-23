@@ -33,7 +33,8 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000)
 }
 
-var sec = 6 * 60 * 60 ////// set time in seconds unit
+// new Date(year, month, day, hours, minutes, seconds, milliseconds)
+var target = new Date(2016, 11, 24, 17, 0, 0, 0)
 
-var deadline = new Date(Date.parse(new Date()) + sec * 1000)
+var deadline = new Date(Date.parse(target))
 initializeClock('clockdiv', deadline)
